@@ -64,9 +64,9 @@ This snippet when run wil give the result:
 
 <pre>
 Out start: main
-Out ended: main
 In start : main
 In ended : main
+Out ended: main
 </pre>
  
 This is because `delay()` is a suspended function and when called, it suspends the execution from the current block `run` while letting the code inside `launch` block to execute before passing the control back to the `run` block and running the code after it  
