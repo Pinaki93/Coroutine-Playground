@@ -21,9 +21,9 @@ Reference: https://medium.com/@elye.project/understanding-suspend-function-of-co
 
 ```kotlin
 launch {
-        println("In start : ${getThreadName()}")
-        delay(200)
-        println("In ended : ${getThreadName()}")
+    println("In start : ${getThreadName()}")
+    delay(200)
+    println("In ended : ${getThreadName()}")
 }
 
 run {
