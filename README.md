@@ -20,16 +20,16 @@ Reference: https://medium.com/@elye.project/understanding-suspend-function-of-co
 ### Blocking:
 
 ```kotlin
-launch(coroutineContext) {
-    println("In start : ${getThreadName()}")
-    delay(200)
-    println("In ended : ${getThreadName()}")
+launch {
+        println("In start : ${getThreadName()}")
+        delay(200)
+        println("In ended : ${getThreadName()}")
 }
 
 run {
-    println("Out start: ${getThreadName()}")
-    Thread.sleep(300) //blocking
-    println("Out ended: ${getThreadName()}")
+     println("Out start: ${getThreadName()}")
+     Thread.sleep(300) //blocking
+     println("Out ended: ${getThreadName()}")
 }
 ```
 
@@ -47,7 +47,7 @@ This is because `Thread.sleep()` blocks the Thread and the `run` block will exec
 ### Suspending:
 
 ```kotlin
-launch(coroutineContext) {
+launch {
     println("In start : ${getThreadName()}")
     delay(200)
     println("In ended : ${getThreadName()}")

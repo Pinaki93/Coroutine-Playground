@@ -7,7 +7,7 @@ import kotlinx.coroutines.runBlocking
 fun main() {
     runBlocking {
         // Start a coroutine
-        launch(coroutineContext) {
+        launch {
             println("In start : ${getThreadName()}")
             delay(200)
             println("In ended : ${getThreadName()}")
