@@ -15,7 +15,8 @@ fun main() {
 
         run {
             println("Out start: ${getThreadName()}")
-            delay(300) //blocking
+//            delay(300) //suspending
+            Thread.sleep(300) //blocking
             println("Out ended: ${getThreadName()}")
         }
     }
