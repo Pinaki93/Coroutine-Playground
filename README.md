@@ -17,4 +17,4 @@ I intend to keep adding snippets as I keep exploring.
 ### Basics:
     
 ### Miscellaneous
-    - [Blocking vs Suspending](docs/miscellaneous/BlockingVsSuspending.md)
+- [Blocking vs Suspending](docs/miscellaneous/BlockingVsSuspending.md)
