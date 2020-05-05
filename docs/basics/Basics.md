@@ -36,6 +36,21 @@ fun main() = runBlocking<Unit> { // start main coroutine
 
 > This is also a way to write unit tests for suspending functions
 
-## Waiting 
+### Waiting for the job to complete
 
+Using `join()` method, we can wait explicitly until the job ends
+```kotlin
+val job = GlobalScope.launch { // launch a new coroutine and keep a reference to its Job
+    delay(1000L)
+    println("World!")
+}
+println("Hello,")
+job.join() // wait until child coroutine completes
+```  
+
+
+### Issue with using GlobalScole.launch{}
+`GlobalScole.launch{}` and then keeping the reference of the jobs can be error-prone. We may launch a coroutine in the global scope and forget to keep a reference of the job and it might still keep running even after the piece of code running it (e.g: An Activity/Service) gets over. This would lead to memory leaks.   
+
+> Solution: Use Structured Concurrency
 
