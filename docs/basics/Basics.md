@@ -32,9 +32,9 @@ fun main() = runBlocking<Unit> { // start main coroutine
 }
 ```
 
->> The main thread invoking runBlocking blocks until the coroutine inside runBlocking completes.
+> The main thread invoking runBlocking blocks until the coroutine inside runBlocking completes.
 
->> This is also a way to write unit tests for suspending functions
+> This is also a way to write unit tests for suspending functions
 
 ## Waiting 
 
